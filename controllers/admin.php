@@ -17,7 +17,7 @@ $jwt = $_GET['jwt'];
 
 try {
     // Decodificar el token
-    // Aquí no debes pasar por referencia el tercer argumento (headers)
+    //Marca como erro el H256
     $decoded = JWT::decode($jwt, JWT_SECRET, ['HS256']);
     $userData = (array) $decoded->data;
 
